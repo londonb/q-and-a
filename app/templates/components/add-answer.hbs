@@ -1,0 +1,18 @@
+{{#if clickAddAnswer}}
+<div >
+  <h3>Add an Answer: </h3>
+  <form id="newAnswer">
+    <div class="form-group">
+      <label for="authorAnswer">Username:</label>
+      {{input class="form-control" value=authorAnswer id="authorAnswer"}}
+    </div>
+    <div class="form-group">
+      <label for="words">Answer:</label>
+      {{textarea rows=4 class="form-control" value=answer id="answer"}}
+    </div>
+    <button class="btn btn-lg btn-default btn-success" {{action "submitAnswer"}}>Submit Answer</button>
+  </form>
+</div>
+{{else}}
+<button class="btn btn-lg btn-default" {{action "clickAddAnswer"}}>Add Answer</button>
+{{/if}}
