@@ -1,7 +1,5 @@
 <h1>Find a question that you can answer</h1>
 
-<!-- {{question-list question = model}} -->
 {{#each model as |question|}}
-    <h3>{{question.author}} asks:</h3>
-    {{question.ask}}
+  {{question-tile question = question}}
 {{/each}}
