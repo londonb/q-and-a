@@ -1,9 +1,13 @@
 <div class="row">
   <div class="col-sm-7">
     {{question-detail question=model}}
-    {{add-answer question=model addAnswer="newAnswer"}}
+    {{add-answer question=model newAnswer="newAnswer"}}
+    {{show-answer question=model}}
   </div>
   <div class="col-sm-5">
     {{update-question question=model updateQuestion="update"}}
   </div>
 </div>
+{{#each model.answers as |answer|}}
+{{answer.answer}}
+{{/each}}

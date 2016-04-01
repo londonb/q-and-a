@@ -6,13 +6,14 @@ export default Ember.Component.extend({
     clickAddAnswer(){
       this.set('clickAddAnswer', true);
     },
-    submitAnswer(){
+    newAnswer(){
       var params = {
         answer: this.get('answer'),
-        authorAnswer: this.get('authorAnswer')
+        authorAnswer: this.get('authorAnswer'),
+        question: this.get('question')
       };
       this.set('clickAddAnswer', false);
-      this.sendAction('addAnswer', params);
+      this.sendAction('newAnswer', params);
     }
   }
 });

@@ -7,12 +7,22 @@ export default Ember.Route.extend({
     actions: {
      update(question, params) {
        Object.keys(params).forEach(function(key) {
-         if(params[key]!==undefined) {
+         if(params[key]!==undefined && params[key] !== "") {
            question.set(key,params[key]);
          }
        });
        question.save();
        this.transitionTo('index');
+     },
+     newAnswer(params) {
+       var answer = this.store.createRecord('answer',params);
+       var question = params.question;
+       console.log(answer);
+       question.get('answers').addObject(answer);
+       answer.save().then(function(){
+         return question.save();
+       });
+       this.transitionTo('question', params.question);
      }
    }
 });
