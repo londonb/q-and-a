@@ -1,3 +1,29 @@
-<h2 id="title">Welcome to Ember</h2>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">{{#link-to 'index'}}Q and A Message Board{{/link-to}}</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-{{outlet}}
+<header class="jumbotron">
+  <h1>The answer place</h1>
+</header>
+<div class="container">
+  {{outlet}}
+</div>
+
+<footer>
+
+</footer>
