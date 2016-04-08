@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import moment from 'moment';
 
 export default Ember.Component.extend({
   clickAddAnswer: false,
@@ -10,7 +11,8 @@ export default Ember.Component.extend({
       var params = {
         answer: this.get('answer'),
         authorAnswer: this.get('authorAnswer'),
-        question: this.get('question')
+        question: this.get('question'),
+        date: this.get('date') ? this.get('date'): moment().format('MMMM Do YYYY, h:mm a')
       };
       this.set('clickAddAnswer', false);
       this.sendAction('newAnswer', params);
