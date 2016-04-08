@@ -1,12 +1,11 @@
+question.hbs
 <div class="row">
   <div class="col-sm-7">
     {{question-detail question=model}}
+    {{answer-list question=model}}
     {{add-answer question=model newAnswer="newAnswer"}}
   </div>
   <div class="col-sm-5">
     {{update-question question=model updateQuestion="update"}}
   </div>
 </div>
-{{#each model.answers as |answer|}}
-  <p>{{answer-tile question=question answer=answer}}</p>
-{{/each}}
