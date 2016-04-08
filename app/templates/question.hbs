@@ -8,5 +8,5 @@
   </div>
 </div>
 {{#each model.answers as |answer|}}
-  <p>{{answer.authorAnswer}} thinks the answer is: {{answer.answer}}</p>
+  <p>{{answer-tile question=question answer=answer}}</p>
 {{/each}}
