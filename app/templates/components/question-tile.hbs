@@ -1,2 +1,4 @@
+question-tile.hbs
 <h3>{{question.author}} asks:</h3>
 {{#link-to 'question' question.id}}{{question.ask}}{{/link-to}}
+<button class="btn btn-sm btn-info"{{action 'addToCart' question}}>Add to Cart</button>
