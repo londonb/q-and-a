@@ -1,7 +1,12 @@
 # Q-and-a
-### Brad London on April 1st 2016
+### Brad London on April 1, 2016 [updated on April 8, 2016]
 
 This is a basic template to allow users to ask questions and have other people respond to them.
+
+Included in the 4/8/16 update:
+* Allow user to add a question to a list of their favorite questions
+* Sort answer postings based on whether the liked the question or not
+* Include a date-stamp of when the answer was posted
 
 ## Prerequisites
 
