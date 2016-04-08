@@ -5,5 +5,8 @@ export default Ember.Service.extend({
 
   add(pick) {
     this.get('picks').addObject(pick);
+  },
+  remove(pick) {
+    this.get('picks').removeObject(pick);
   }
 });

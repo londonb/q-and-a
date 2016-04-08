@@ -6,6 +6,9 @@ export default Ember.Component.extend({
   actions: {
     addToCart(pick) {
       this.get('favQuestion').add(pick);
+    },
+    removeFromCart(pick) {
+      this.get('favQuestion').remove(pick);
     }
   }
 });
