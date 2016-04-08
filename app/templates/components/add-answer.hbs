@@ -16,8 +16,8 @@
     <div class="form-group rating">
       <label for="rating">Rating This Question</label>
         {{#x-select value=rating}}
-          {{#x-option value=-1}}<span>&#10004;</span>{{/x-option}}
-          {{#x-option value=1}}<span>&#10008;</span>{{/x-option}}
+          {{#x-option value=-1}}<span>&#10008;</span>{{/x-option}}
+          {{#x-option value=1}}<span>&#10004;</span>{{/x-option}}
         {{/x-select}}
     </div>
     <button class="btn btn-lg btn-default btn-success" {{action "newAnswer"}}>Submit Answer</button>

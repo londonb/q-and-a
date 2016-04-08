@@ -4,6 +4,10 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('question', params.question_id);
   },
+
+  afterModel: function(model) {
+    return model.get('answers');
+  },
     actions: {
      update(question, params) {
        Object.keys(params).forEach(function(key) {
